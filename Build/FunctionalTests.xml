@@ -1,0 +1,21 @@
+<phpunit
+	backupGlobals="true"
+	backupStaticAttributes="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertWarningsToExceptions="true"
+	forceCoversAnnotation="false"
+	processIsolation="true"
+	stopOnError="false"
+	stopOnFailure="false"
+	stopOnIncomplete="false"
+	stopOnSkipped="false"
+	strict="false"
+	verbose="false"
+>
+	<testsuites>
+		<testsuite name="Core tests">
+			<directory>../Tests/Functional/</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>
