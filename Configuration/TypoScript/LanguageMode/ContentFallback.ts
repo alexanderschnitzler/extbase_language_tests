@@ -4,4 +4,4 @@
 # fall back to another language, defined by the value of this keyword,
 # e.g. "content_fallback ; 1,0" to fall back to the content of
 # sys_language_uid 1 and if that is not present either, to default (0).
-config.sys_language_mode = content_fallback
+config.sys_language_mode = content_fallback;1,0
