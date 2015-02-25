@@ -18,4 +18,13 @@
 		<flag>es</flag>
 		<static_lang_isocode>0</static_lang_isocode>
 	</sys_language>
+	<sys_language>
+		<uid>3</uid>
+		<pid>0</pid>
+		<tstamp>1422732070</tstamp>
+		<hidden>0</hidden>
+		<title>French</title>
+		<flag>fr</flag>
+		<static_lang_isocode>0</static_lang_isocode>
+	</sys_language>
 </dataset>

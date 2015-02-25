@@ -188,4 +188,40 @@ class LanguageModeTest extends AbstractTestCase {
 		 */
 		$this->assertCount(0, $queryResult);
 	}
+
+	/**
+	 * @test
+	 */
+	public function ContentFallbackWithOverlaySetToHideNonTranslatedAndTranslatedHiddenTest() {
+
+		/**
+		 * Test Setup
+		 */
+		$this->addTypoScriptToLoad('EXT:extbase_language_tests/Configuration/TypoScript/LanguageUid/3.ts');
+		$this->addTypoScriptToLoad('EXT:extbase_language_tests/Configuration/TypoScript/LanguageOverlay/HideNonTranslated.ts');
+		$this->addTypoScriptToLoad('EXT:extbase_language_tests/Configuration/TypoScript/LanguageMode/ContentFallback.ts');
+		$this->setUpFrontend();
+		$this->itemRepository = $this->objectManager->get(\SCHNITZLER\ExtbaseLanguageTests\Domain\Repository\ItemRepository::class);
+
+		$queryResult = $this->itemRepository->findAll();
+		$query = $queryResult->getQuery();
+
+
+		/*********************************************************************************************************************************/
+
+		/**
+		 * Check that language settings affect the query settings
+		 */
+		$this->assertEquals('hideNonTranslated', $query->getQuerySettings()->getLanguageOverlayMode());
+		$this->assertEquals(3, $query->getQuerySettings()->getLanguageUid());
+		$this->assertEquals('content_fallback', $query->getQuerySettings()->getLanguageMode());
+
+		/**
+		 * There should be 0 records because overlaying is enabled and
+		 * there is a page overlay for language 2 but only a hidden record with a
+		 * translation of language 3 exist.
+		 */
+		$this->assertCount(0, $queryResult);
+	}
+
 }
