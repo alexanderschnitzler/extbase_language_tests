@@ -50,23 +50,23 @@ class LanguageModeTest extends AbstractTestCase {
 		 *     - German only
 		 *
 		 *   Story:
-		 *     A website is requestes in spanish but there are not records
+		 *     A website is requested in spanish but there are no records
 		 *     in this language available. The fallback chain falls back to
 		 *     german, then default (english).
 		 *
 		 *     With sys_language_overlay disabled, typo3 fetches all german
 		 *     elements directly and displays them. In this case content
-		 *     element sthat only exist in german, are shown as well.
+		 *     elements that only exist in german, are shown as well.
 		 *
 		 *     With sys_language_overlay enabled, typo3 sets the actual
 		 *     language to default and tries to overlay all elements that
 		 *     have a german translation. In this case content elements
-		 *     that only exist in german, aren't shown.
+		 *     that only exist in german, are not shown.
 		 *
 		 *     Actually the sys_language_overlay mode simply defines the
-		 *     direction in which fallback elements are resolved. If disabled
+		 *     direction in which fallback elements are resolved. If disabled,
 		 *     TYPO3 tries to fetch as many elements as possible that exist in
-		 *     the first fallback language as possible.
+		 *     the first fallback language.
 		 *
 		 *     If enabled, TYPO3 fetches all default records and tries to
 		 *     overlay as much as possible.
@@ -75,15 +75,15 @@ class LanguageModeTest extends AbstractTestCase {
 		 * dependent on a lot of variables. This scenario only works if
 		 * there are these three languages, language 2 is requested and
 		 * there is no page overlay for this language. As soon as a
-		 * page overlay exists the behaviour is as follows
+		 * page overlay exists, the behaviour is as follows:
 		 *
-		 * - With sys_language_overlay disabled typo3 searches only for
+		 * - With sys_language_overlay disabled, typo3 searches only for
 		 *   content elements that exist in the the requested language.
 		 *   This can be translated records or records that exclusively
 		 *   exist in this language. If no records are found, the test
 		 *   page is blank for sure.
 		 *
-		 * - With sys_language_overlay enabled typo3 again fetches all
+		 * - With sys_language_overlay enabled, typo3 again fetches all
 		 *   default records and tries to overlay them as close as
 		 *   possible. In this setting only translated records are shown.
 		 *   Also the fallback chain will be followed, so it may be, that
@@ -117,7 +117,7 @@ class LanguageModeTest extends AbstractTestCase {
 		$this->assertCount(0, $queryResult);
 
 		/**
-		 * Check that language settings affect the query settings
+		 * Check, that language settings affect the query settings
 		 */
 		$this->assertEquals(FALSE, $query->getQuerySettings()->getLanguageOverlayMode());
 		$this->assertEquals(2, $query->getQuerySettings()->getLanguageUid());
@@ -143,7 +143,7 @@ class LanguageModeTest extends AbstractTestCase {
 		/*********************************************************************************************************************************/
 
 		/**
-		 * Check that language settings affect the query settings
+		 * Check, that language settings affect the query settings
 		 */
 		$this->assertEquals(TRUE, $query->getQuerySettings()->getLanguageOverlayMode());
 		$this->assertEquals(2, $query->getQuerySettings()->getLanguageUid());
@@ -176,7 +176,7 @@ class LanguageModeTest extends AbstractTestCase {
 		/*********************************************************************************************************************************/
 
 		/**
-		 * Check that language settings affect the query settings
+		 * Check, that language settings affect the query settings
 		 */
 		$this->assertEquals('hideNonTranslated', $query->getQuerySettings()->getLanguageOverlayMode());
 		$this->assertEquals(2, $query->getQuerySettings()->getLanguageUid());

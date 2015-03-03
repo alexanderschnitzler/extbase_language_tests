@@ -64,7 +64,7 @@ class LanguageOverlayTest extends AbstractTestCase {
 		}
 
 		/**
-		 * Check that language settings affect the query settings
+		 * Check, that language settings affect the query settings
 		 */
 		$this->assertEquals(1, $query->getQuerySettings()->getLanguageUid());
 		$this->assertEquals(FALSE, $query->getQuerySettings()->getLanguageOverlayMode());
@@ -126,7 +126,7 @@ class LanguageOverlayTest extends AbstractTestCase {
 		}
 
 		/**
-		 * Check that language settings affect the query settings
+		 * Check, that language settings affect the query settings
 		 */
 		$this->assertEquals(1, $query->getQuerySettings()->getLanguageUid());
 		$this->assertEquals(TRUE, $query->getQuerySettings()->getLanguageOverlayMode());
@@ -187,7 +187,7 @@ class LanguageOverlayTest extends AbstractTestCase {
 		}
 
 		/**
-		 * Check that language settings affect the query settings
+		 * Check, that language settings affect the query settings
 		 */
 		$this->assertEquals(1, $query->getQuerySettings()->getLanguageUid());
 		$this->assertEquals('hideNonTranslated', $query->getQuerySettings()->getLanguageOverlayMode());
