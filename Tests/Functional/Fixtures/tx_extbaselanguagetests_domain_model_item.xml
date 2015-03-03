@@ -52,4 +52,17 @@
 		<l18n_parent>0</l18n_parent>
 		<l18n_diffsource>a:3:{s:16:"sys_language_uid";N;s:6:"hidden";N;s:5:"title";N;}</l18n_diffsource>
 	</tx_extbaselanguagetests_domain_model_item>
+	<tx_extbaselanguagetests_domain_model_item>
+		<uid>5</uid>
+		<pid>1</pid>
+		<title>[FR] 1</title>
+		<tstamp>1422732862</tstamp>
+		<crdate>1422732862</crdate>
+		<deleted>0</deleted>
+		<hidden>1</hidden>
+		<t3_origuid>1</t3_origuid>
+		<sys_language_uid>3</sys_language_uid>
+		<l18n_parent>1</l18n_parent>
+		<l18n_diffsource>a:3:{s:16:"sys_language_uid";s:1:"0";s:6:"hidden";s:1:"0";s:5:"title";s:6:"Bucket";}</l18n_diffsource>
+	</tx_extbaselanguagetests_domain_model_item>
 </dataset>
