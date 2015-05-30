@@ -1,0 +1,13 @@
+{
+    "name": "schnitzler/extbase_language_tests",
+    "description": "Functional test suite for testing the Extbase localization behaviour.",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Alexander Schnitzler",
+            "email": "git@alexanderschnitzler.de"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

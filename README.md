@@ -1,0 +1,12 @@
+# ext base_language_tests
+Functional test suite for testing language settings in the context of Ext base.
+
+[![Build Status](https://travis-ci.org/alexanderschnitzler/extbase_language_tests.svg?branch=develop)](https://travis-ci.org/alexanderschnitzler/extbase_language_tests)
+
+## What does it do?
+
+This test suite is a growing amount of tests to ensure if and which parts of the TYPO3 localization settings work when using the Ext base persistence.
+
+## Why is it necessary?
+
+Because the current implementation of localization settings behave completely different from how the core behaves. An overview is necessary to know what exactly is wrong and how to fix it in the future.
